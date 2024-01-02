@@ -4,7 +4,7 @@
 }
 
 .container{
-    width: 80%;
+    width: 85%;
     margin: auto;
     padding: 20px;
 }
@@ -60,12 +60,12 @@ ul{
 
 .product-image{
     border-radius: 15px;
-    width: 80%;
+    width: 90%;
 }
 
 .side-about{
     /* background-color: thistle; */
-    width: 50%;
+    width: 45%;
     margin: auto;
 }
 
@@ -118,7 +118,7 @@ ul{
 }
 
 .image-down img{
-    width: 15%;
+    width: 18%;
     border-radius: 10px;
     margin: 10px;
 }
