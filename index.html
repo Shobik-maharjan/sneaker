@@ -1,68 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-    <!-- Navbar code starts from here -->
-    <nav>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Navbar code starts from here -->
+      <nav>
         <div>
-            <ul class="navbar">
-                <li><a href="#" class="logo"><img src="./images/logo.svg" alt=""></a></li>
-                <ul class="menus">
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <ul class="side-menu">
-                    <li><a href="#"><img src="./images/icon-cart.svg" alt="cart"></a></li>
-                    <li><a href="#"><img src="./images/image-avatar.png" alt="avatar" width="35px"></a></li>
-                </ul>
+          <ul class="navbar">
+            <li>
+              <a href="#" class="logo"
+                ><img src="./images/logo.svg" alt=""
+              /></a>
+            </li>
+            <ul class="menus">
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
+            <ul class="side-menu">
+              <li>
+                <a href="#"><img src="./images/icon-cart.svg" alt="cart" /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./images/image-avatar.png"
+                    alt="avatar"
+                    width="35px"
+                /></a>
+              </li>
+            </ul>
+          </ul>
         </div>
-    </nav>
-    <!-- Navbar code ends here -->
-    <hr>
+      </nav>
+      <!-- Navbar code ends here -->
+      <hr />
 
-    <section class="main">
+      <section class="main">
         <div class="side-image">
-            <img src="./images/image-product-1.jpg" alt="image-product-1" class="product-image" >
-            <div class="image-down">
-                <img src="./images/image-product-1-thumbnail.jpg" alt="">
-                <img src="./images/image-product-2-thumbnail.jpg" alt="">
-                <img src="./images/image-product-3-thumbnail.jpg" alt="">
-                <img src="./images/image-product-4-thumbnail.jpg" alt="">
-            </div>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="image-product-1"
+            class="product-image"
+          />
+          <div class="image-down">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+            <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+            <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+            <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+          </div>
         </div>
 
         <div class="side-about">
-            <span class="side-about__name">SNEAKER COMPANY</span>
-            <h2 class="side-about__product-name">Fall Limited Edition Sneakers</h2>
-            <p>These low-profile sneakers are you perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everythinh the weather can offer.</p>
+          <span class="side-about__name">SNEAKER COMPANY</span>
+          <h2 class="side-about__product-name">
+            Fall Limited Edition Sneakers
+          </h2>
+          <p>
+            These low-profile sneakers are you perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everythinh
+            the weather can offer.
+          </p>
+          <br />
 
-            <p>$125.00 50%</p>
-            <br>
-            <p class="previous-price"><del>$250.00</del></p>
+          <p>$125.00 50%</p>
+          <p class="previous-price"><del>$250.00</del></p>
 
-            <div class="btn">
-                <div class="btn__one">
-                    <button class="btn__plus-minus">-</button>
-                    <p class="btn__number">0</p>
-                    <button class="btn__plus-minus">+</button>
-                </div>
-                
-                    <button class="btn__cart">Add to cart</button>
-            
+          <div class="btn">
+            <div class="btn__one">
+              <button class="btn__plus-minus">
+                <img src="./images/icon-minus.svg" alt="" />
+              </button>
+              <p class="btn__number">0</p>
+              <button class="btn__plus-minus">
+                <img src="./images/icon-plus.svg" alt="" />
+              </button>
             </div>
+
+            <button class="btn__cart">Add&nbsp;to&nbsp;cart</button>
+          </div>
         </div>
-    </section>
-    
-</div>
-</body>
+      </section>
+    </main>
+  </body>
 </html>
