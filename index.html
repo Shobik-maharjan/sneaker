@@ -11,8 +11,8 @@
       <!-- Navbar code starts from here -->
       <nav>
         <div>
-          <ul class="navbar">
-            <div id="menuToggle">
+          <ul class="navbar" id="menuToggle">
+            <div id="bars">
               <div class="bar1"></div>
               <div class="bar2"></div>
               <div class="bar3"></div>
@@ -22,12 +22,14 @@
                 ><img src="./images/logo.svg" alt=""
               /></a>
             </li>
-            <ul class="menus">
-              <li><a href="#">Collections</a></li>
-              <li><a href="#">Men</a></li>
-              <li><a href="#">Women</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+            <ul>
+              <div id="menus">
+                <li class="menu-item"><a href="#">Collections</a></li>
+                <li class="menu-item"><a href="#">Men</a></li>
+                <li class="menu-item"><a href="#">Women</a></li>
+                <li class="menu-item"><a href="#">About</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+              </div>
             </ul>
             <ul class="side-menu">
               <li>
@@ -56,9 +58,21 @@
             class="product-image"
           />
           <div class="image-down">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="" />
-            <img src="./images/image-product-2-thumbnail.jpg" alt="" />
-            <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+            <img
+              onclick="selectImage(one)"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+            <img
+              onclick="selectImage(two)"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt=""
+            />
+            <img
+              onclick="selectImage(three)"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt=""
+            />
             <img src="./images/image-product-4-thumbnail.jpg" alt="" />
           </div>
         </div>
