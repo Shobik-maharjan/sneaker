@@ -1,27 +1,46 @@
-menuToggle.addEventListener("click", function () {
+bars.addEventListener("click", function () {
   document.getElementById("bars").classList.toggle("change");
   document.querySelector("#menus").classList.toggle("menus");
-  document.querySelector("#menu-bars").classList.toggle("displays");
 });
-// function myFunction() {
-//   document.getElementById("menuToggle").classList.toggle("change");
-//   //   this.classList.toggle("change");
-// }
 
-function selectImage(x) {
-  let one = 1;
-  let two = 2;
-  let three = 3;
-  if (x == one) {
-    one.document.querySelector(".product-image").src =
-      "./images/image-product-2.jpg";
+function cart() {
+  document.getElementById("cart").classList.toggle("cart-show");
+}
+
+function buttonPlus() {
+  let quantity = document.querySelector("#quantity").value;
+  quantity++;
+  document.querySelector("#quantity").value = quantity;
+}
+
+function buttonMinus() {
+  let quantity = document.querySelector("#quantity").value;
+  if (quantity <= 0) {
+    return;
+  } else {
+    quantity--;
+    document.querySelector("#quantity").value = quantity;
   }
-  if (x == two) {
-    two.document.querySelector(".product-image").src =
-      "./images/image-product-3.jpg";
+}
+
+let slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
+
+function showDivs(n) {
+  let i;
+  let x = document.getElementsByClassName("product-image");
+  if (n > x.length) {
+    slideIndex = 1;
   }
-  if (x == three) {
-    three.document.querySelector(".product-image").src =
-      "./images/image-product-4.jpg";
+  if (n < 1) {
+    slideIndex = x.length;
   }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex - 1].style.display = "block";
 }

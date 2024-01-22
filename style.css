@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
+  font-family: kumbh Sans;
 }
 
 .container {
@@ -24,18 +27,22 @@ ul {
 
 .logo {
   font-size: 2rem;
-  /* background-color: #b7bbc7; */
   width: 20%;
 }
 
 #menus {
-  /* background-color: yellowgreen; */
   display: flex;
   justify-content: space-between;
-  margin: 10px;
-  width: 40%;
   margin-right: auto;
   padding-left: 10px;
+}
+
+.menu-item a {
+  padding-bottom: 16px;
+  align-items: center;
+}
+.menu-item a:hover {
+  border-bottom: 4px solid hsl(26, 100%, 55%);
 }
 
 #menus li {
@@ -48,8 +55,49 @@ ul {
   /* background-color: blueviolet; */
   align-items: center;
 }
+#cart {
+  display: none;
+}
+
+#cart.cart-show {
+  display: block;
+  background-color: white;
+  position: fixed;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  right: 10px;
+  left: 70%;
+  top: 12vh;
+  box-shadow: 0px 0px 12px 0px hsl(0deg 0% 0% / 40%);
+}
+.card-heading {
+  padding: 14px;
+}
+.cart-text {
+  height: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: hsla(0, 0%, 22%, 0.808);
+}
+
+#profile {
+  width: 35px;
+}
+#profile:hover {
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
+}
 .side-menu li {
   padding: 10px;
+}
+
+.prev,
+.next {
+  display: none;
 }
 
 .main {
@@ -75,11 +123,16 @@ ul {
 }
 
 .side-about__name {
-  color: rgb(185, 84, 16);
+  color: hsl(26, 100%, 55%);
 }
 
 .side-about__product-name {
   padding-bottom: 30px;
+  font-weight: 700;
+  font-size: 40px;
+}
+.side-about__text {
+  color: hsla(0, 0%, 0%, 0.7);
 }
 .previous-price {
   color: grey;
@@ -97,76 +150,99 @@ ul {
 
 .btn__plus-minus {
   padding: 14px;
-  color: rgb(185, 84, 16);
   border: none;
+  cursor: pointer;
 }
 
-.btn__number {
-  font-size: 1.2rem;
-  padding: 20px;
+#quantity {
+  padding: 8px 0px;
+  text-align: center;
+  font-size: 1.4rem;
+  width: 100%;
+  border: none;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .btn__cart {
   font-size: 1.2rem;
-  padding: 14px;
+  padding: 14px 60px;
   border-radius: 10px;
   border: none;
   color: white;
-  background-color: rgb(185, 84, 16);
+  background-color: hsl(26, 100%, 55%);
+  cursor: pointer;
 }
 
 .image-down {
   display: flex;
-  justify-content: flex-start;
-}
-
-.image-down img::before {
-  opacity: 50%;
-  cursor: pointer;
-  border: 2px solid rgb(185, 84, 16);
+  justify-content: space-between;
 }
 
 .image-down img:hover {
-  opacity: 50%;
   cursor: pointer;
-  border: 2px solid rgb(185, 84, 16);
+  opacity: 0.3;
+  border: 2px solid hsl(26, 100%, 55%);
 }
 
 .image-down img {
   width: 18%;
   border-radius: 10px;
   margin: 10px;
+  transition: opacity 0.8s ease;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1085px) {
   .image-down img {
     width: 18%;
     border-radius: 10px;
     margin: 6px;
   }
-}
 
-@media screen and (max-width: 768px) {
   .btn__cart {
-    font-size: 1rem;
+    padding: 14px 30px;
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
+  .main {
+    gap: 6%;
+  }
+  .side-about__product-name {
+    font-size: 32px;
+  }
+  .btn__cart {
+    font-size: 1rem;
+  }
+  .btn {
+    flex-direction: column;
+  }
+
+  .btn__one {
+    padding-right: 0px;
+  }
+
+  .btn__cart {
+    padding: 14px 60px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 680px) {
   #menus {
     width: 80%;
     flex-wrap: wrap;
   }
-
+  .side-image {
+    width: 48%;
+  }
+  .side-about__product-name {
+    font-size: 26px;
+  }
   .btn__plus-minus {
     padding: 10px;
   }
 
   .btn__number {
-    padding: 10px;
-  }
-  .btn__cart {
-    font-size: 0.95rem;
     padding: 10px;
   }
 }
@@ -184,6 +260,7 @@ ul {
     background-color: #333;
     margin: 4px 0;
     transition: 0.4s;
+    opacity: 70%;
   }
 
   .change .bar1 {
@@ -199,14 +276,14 @@ ul {
   .logo {
     padding-left: 10px;
   }
-  hr {
+  .horizontal-line {
     display: none;
   }
-
   #menus {
-    width: 50%;
+    width: 60%;
     margin: 0;
     justify-content: flex-start;
+    box-shadow: 40vw 0px hsl(0, 0%, 0%, 77%);
   }
 
   #bars {
@@ -214,15 +291,11 @@ ul {
     z-index: 1;
   }
 
-  .display {
-    display: block;
-  }
-
   .menus {
     position: fixed;
     left: 0;
     top: 0;
-    padding-top: 65px;
+    padding-top: 80px;
     flex-direction: column;
     height: 100vh;
     background-color: hsl(0, 0%, 100%);
@@ -233,24 +306,85 @@ ul {
   }
   .menus .menu-item {
     display: flex;
+    font-weight: bold;
+  }
+
+  .menu-item a {
+    padding-bottom: 10px;
+  }
+
+  .menu-item a:hover {
+    border-bottom: none;
   }
 
   .menus li {
     padding: 6px;
   }
 
+  #cart.cart-show {
+    display: block;
+    background-color: white;
+    position: fixed;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    left: 0;
+    top: 12vh;
+    /* height: 200px; */
+    right: 0;
+  }
+  .card-heading {
+    padding: 14px;
+  }
+  .cart-text {
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: hsla(0, 0%, 22%, 0.808);
+  }
+
   .container {
     width: 100%;
     padding: 0px;
   }
+
   .product-image {
     border-radius: 0px;
     width: 100%;
   }
 
+  .prev,
+  .next {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 60vw;
+    margin: auto 10px;
+    padding: 16px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+  }
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+
   .main {
     flex-direction: column;
     padding-top: 0px;
+  }
+
+  .side-about__name {
+    margin: 10px 0px;
   }
   .btn {
     display: grid;
@@ -268,6 +402,14 @@ ul {
   .btn__cart {
     width: 90%;
     margin: auto;
+  }
+  #quantity {
+    padding: 14px 0px;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 100%;
+    border: none;
+    background-color: hsl(0, 0%, 98%);
   }
   .btn__plus-minus {
     padding: 20px;

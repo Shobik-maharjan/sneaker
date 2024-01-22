@@ -11,7 +11,7 @@
       <!-- Navbar code starts from here -->
       <nav>
         <div>
-          <ul class="navbar" id="menuToggle">
+          <ul class="navbar">
             <div id="bars">
               <div class="bar1"></div>
               <div class="bar2"></div>
@@ -33,14 +33,25 @@
             </ul>
             <ul class="side-menu">
               <li>
-                <a href="#"><img src="./images/icon-cart.svg" alt="cart" /></a>
+                <a href="#"
+                  ><img
+                    src="./images/icon-cart.svg"
+                    alt="cart"
+                    onclick="cart()"
+                  />
+                </a>
+                <div id="cart">
+                  <h3 class="card-heading">Cart</h3>
+                  <hr />
+                  <p class="cart-text">Your cart is empty.</p>
+                </div>
               </li>
               <li>
                 <a href="#"
                   ><img
                     src="./images/image-avatar.png"
                     alt="avatar"
-                    width="35px"
+                    id="profile"
                 /></a>
               </li>
             </ul>
@@ -48,7 +59,7 @@
         </div>
       </nav>
       <!-- Navbar code ends here -->
-      <hr />
+      <hr class="horizontal-line" />
 
       <section class="main">
         <div class="side-image">
@@ -56,33 +67,39 @@
             src="./images/image-product-1.jpg"
             alt="image-product-1"
             class="product-image"
+          /><img
+            src="./images/image-product-2.jpg"
+            alt="image-product-2"
+            class="product-image"
           />
+          <img
+            src="./images/image-product-3.jpg"
+            alt="image-product-3"
+            class="product-image"
+          />
+          <img
+            src="./images/image-product-4.jpg"
+            alt="image-product-4"
+            class="product-image"
+          />
+
+          <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="next" onclick="plusDivs(+1)">&#10095;</button>
+
           <div class="image-down">
-            <img
-              onclick="selectImage(one)"
-              src="./images/image-product-1-thumbnail.jpg"
-              alt=""
-            />
-            <img
-              onclick="selectImage(two)"
-              src="./images/image-product-2-thumbnail.jpg"
-              alt=""
-            />
-            <img
-              onclick="selectImage(three)"
-              src="./images/image-product-3-thumbnail.jpg"
-              alt=""
-            />
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+            <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+            <img src="./images/image-product-3-thumbnail.jpg" alt="" />
             <img src="./images/image-product-4-thumbnail.jpg" alt="" />
           </div>
         </div>
 
         <div class="side-about">
-          <span class="side-about__name">SNEAKER COMPANY</span>
+          <h4 class="side-about__name">SNEAKER COMPANY</h4>
           <h2 class="side-about__product-name">
             Fall Limited Edition Sneakers
           </h2>
-          <p>
+          <p class="side-about__text">
             These low-profile sneakers are you perfect casual wear companion.
             Featuring a durable rubber outer sole, they'll withstand everythinh
             the weather can offer.
@@ -90,17 +107,22 @@
           <br />
 
           <div class="price">
-            <p>$125.00 50%</p>
+            <p><b>$125.00</b> 50%</p>
             <p class="previous-price"><del>$250.00</del></p>
           </div>
 
           <div class="btn">
             <div class="btn__one">
-              <button class="btn__plus-minus">
+              <button class="btn__plus-minus" onclick="buttonMinus()">
                 <img src="./images/icon-minus.svg" alt="" />
               </button>
-              <p class="btn__number">0</p>
-              <button class="btn__plus-minus">
+              <input
+                type="text"
+                name="quantity"
+                id="quantity"
+                placeholder="0"
+              />
+              <button class="btn__plus-minus" onclick="buttonPlus()">
                 <img src="./images/icon-plus.svg" alt="" />
               </button>
             </div>
