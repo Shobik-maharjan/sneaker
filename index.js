@@ -1,6 +1,7 @@
 bars.addEventListener("click", function () {
   document.getElementById("bars").classList.toggle("change");
   document.querySelector("#menus").classList.toggle("menus");
+  document.querySelector("#cart").classList.remove("cart-show");
 });
 
 function cart() {
